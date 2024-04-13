@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/header/header";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/header/header';
+import Nav from '@/components/Nav';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "e-Commerce",
-  description: "Some e-Commerce website",
+  title: 'e-Commerce',
+  description: 'Some e-Commerce website',
 };
 
 export default function RootLayout({
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="min-h-screen flex flex-col">
-          <Header />
+          <Nav />
           {children}
 
           <footer className="footer footer-center p-4 bg-base-300 text-base-content">
